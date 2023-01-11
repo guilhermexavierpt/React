@@ -8,9 +8,8 @@ const initialPosition = {
 };
 
 const Hero = () => {
-  const heroPositionState = useState(initialPosition);
-  const positionState = heroPositionState[0];
-  const updatePositionState = heroPositionState[1];
+  const [positionState, updatePositionState] = useState(initialPosition);
+
 setTimeout(() => {
   const newPosition = {x:10, y:10}
   updatePositionState(newPosition)
@@ -20,8 +19,8 @@ setTimeout(() => {
     <div
       style={{
         position: "absolute",
-        bottom: TILE_SIZE * positionState.x,
-        left: TILE_SIZE * positionState.y,
+        bottom: TILE_SIZE * positionState.y,
+        left: TILE_SIZE * positionState.x,
         width: TILE_SIZE,
         height: TILE_SIZE + HEAD_OFFSET, 
         backgroundImage: "url(./Assets/HERO.png)",
