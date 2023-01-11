@@ -1,0 +1,8 @@
+@keyframes hero-animation {
+    from{
+        background-position: x;
+    }
+    to{
+        background-position-x: -192px;
+    }
+}
